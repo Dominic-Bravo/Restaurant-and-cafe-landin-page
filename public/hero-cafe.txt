@@ -1,0 +1,5 @@
+/*
+  Sample hero image for the restaurant/cafe landing page.
+  This is a royalty-free, generated placeholder image from Unsplash.
+  Replace with your own photo for production use.
+*/

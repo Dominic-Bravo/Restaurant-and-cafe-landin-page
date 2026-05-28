@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* Hero background image and overlay */}
             <div className="absolute inset-0 w-full h-full -z-10">
               <img
-                src="/hero-cafe.jpg"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
                 alt="Warm, elegant cafe interior with artisan coffee and food."
                 className="w-full h-full object-cover object-center opacity-80"
                 style={{ filter: 'brightness(0.92) blur(0.5px)' }}
