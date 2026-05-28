@@ -16,22 +16,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-bg text-charcoal font-body min-h-full flex flex-col">
         {/* Sticky Navigation */}
-        <header className="sticky top-0 z-50 bg-bg/90 backdrop-blur border-b border-structural">
-          <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-            <div className="flex items-center gap-2">
-              <span className="font-heading text-2xl text-structural">CafeLogo</span>
+        <header className="sticky top-0 z-50 bg-bg/70 backdrop-blur-md border-b border-structural/30 transition-all duration-300">
+          <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <div className="flex items-center gap-3">
+              <span className="font-heading text-3xl text-structural tracking-tight">Café Editorial</span>
             </div>
-            <ul className="hidden md:flex gap-8 font-medium text-structural">
-              <li><a href="#home" className="hover:text-accent transition">Home</a></li>
-              <li><a href="#menu" className="hover:text-accent transition">Menu</a></li>
-              <li><a href="#about" className="hover:text-accent transition">About</a></li>
-              <li><a href="#gallery" className="hover:text-accent transition">Gallery</a></li>
-              <li><a href="#testimonials" className="hover:text-accent transition">Testimonials</a></li>
-              <li><a href="#contact" className="hover:text-accent transition">Contact</a></li>
+            <ul className="hidden md:flex gap-10 font-medium text-structural text-lg">
+              <li><a href="#home" className="hover:text-terracotta transition">Home</a></li>
+              <li><a href="#menu" className="hover:text-terracotta transition">Menu</a></li>
+              <li><a href="#about" className="hover:text-terracotta transition">About</a></li>
+              <li><a href="#gallery" className="hover:text-terracotta transition">Gallery</a></li>
+              <li><a href="#testimonials" className="hover:text-terracotta transition">Testimonials</a></li>
+              <li><a href="#contact" className="hover:text-terracotta transition">Contact</a></li>
             </ul>
-            <a href="#reservation" className="hidden md:inline-block bg-accent text-bg px-5 py-2 rounded-full font-heading text-lg shadow hover:scale-105 transition">Reserve</a>
+            <a href="#reservation" className="hidden md:inline-block bg-terracotta text-bg px-6 py-2 rounded-full font-heading text-lg shadow editorial-shadow hover:scale-105 hover:bg-gold transition border-2 border-gold">Reserve</a>
             {/* Mobile hamburger menu placeholder */}
-            <button className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Open menu">
+            <button className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu">
               <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
           </nav>
@@ -39,43 +39,43 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main className="flex-1">
           {/* Hero Section */}
-          <section id="home" className="min-h-[90vh] flex flex-col justify-center items-center bg-bg relative overflow-hidden">
+          <section id="home" className="min-h-[90vh] flex flex-col justify-center items-center bg-bg relative overflow-hidden editorial-section">
             {/* Hero background image and overlay */}
             <div className="absolute inset-0 w-full h-full -z-10">
               <img
                 src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
                 alt="Warm, elegant cafe interior with artisan coffee and food."
                 className="w-full h-full object-cover object-center opacity-80"
-                style={{ filter: 'brightness(0.92) blur(0.5px)' }}
+                style={{ filter: 'brightness(0.93) blur(0.5px)' }}
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-bg/80 via-cream/60 to-structural/60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-bg/90 via-bg-alt/80 to-structural/60" />
             </div>
             <div className="text-center max-w-2xl mx-auto py-24">
-              <h1 className="font-heading text-5xl md:text-7xl mb-6 text-accent drop-shadow-lg">
-                Discover <span className="text-terracotta">Your City’s</span> Most Inviting <span className="text-olive">Cafe</span>
+              <h1 className="font-heading text-6xl md:text-8xl mb-8 text-structural drop-shadow-lg tracking-tight leading-tight">
+                Warm Editorial Minimalism
               </h1>
-              <p className="text-lg md:text-2xl mb-8 text-cream bg-structural/80 px-6 py-3 rounded-xl shadow inline-block">
-                Where every cup, every plate, and every moment is crafted for you.<br className="hidden md:inline" />
-                Experience artisan coffee, signature dishes, and a cozy atmosphere.
+              <p className="text-xl md:text-2xl mb-10 text-charcoal bg-bg-alt/90 px-8 py-5 rounded-2xl editorial-shadow inline-block font-body">
+                Cozy. Premium. Inviting. Experience artisan coffee, signature dishes, and Scandinavian-inspired hospitality in the heart of your city.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-                <a href="#reservation" className="bg-accent text-bg px-8 py-3 rounded-full font-heading text-xl shadow-lg hover:scale-105 hover:bg-gold transition border-2 border-gold">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center mt-8">
+                <a href="#reservation" className="bg-terracotta text-bg px-10 py-4 rounded-full font-heading text-2xl shadow-lg editorial-shadow hover:scale-105 hover:bg-gold transition border-2 border-gold">
                   Reserve a Table
                 </a>
-                <a href="#menu" className="bg-terracotta text-cream px-8 py-3 rounded-full font-heading text-xl shadow-lg hover:bg-olive hover:text-bg transition border-2 border-olive">
+                <a href="#menu" className="bg-gold text-structural px-10 py-4 rounded-full font-heading text-2xl shadow-lg editorial-shadow hover:bg-amber hover:text-bg transition border-2 border-amber">
                   View Menu
                 </a>
               </div>
-              <div className="mt-10 flex flex-col items-center gap-2">
+              <div className="mt-14 flex flex-col items-center gap-2">
                 <span className="uppercase tracking-widest text-xs text-gold font-bold">Now Open</span>
-                <span className="text-structural font-heading text-lg">Visit us for breakfast, brunch, or dinner</span>
+                <span className="text-structural font-heading text-lg">Breakfast, brunch, and dinner daily</span>
+                <span className="block mt-6 animate-bounce text-terracotta text-3xl">↓</span>
               </div>
             </div>
           </section>
 
           {/* Featured Menu Section */}
-          <section id="menu" className="py-24 bg-cream">
+          <section id="menu" className="editorial-section bg-bg-alt">
             <div className="max-w-6xl mx-auto px-4">
               {/* Menu cards and filters placeholder */}
               <h2 className="font-heading text-4xl mb-8 text-structural">Featured Menu</h2>
