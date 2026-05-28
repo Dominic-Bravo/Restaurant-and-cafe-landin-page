@@ -40,13 +40,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">
           {/* Hero Section */}
           <section id="home" className="min-h-[90vh] flex flex-col justify-center items-center bg-bg relative overflow-hidden">
-            {/* Hero content and image will go here */}
+            {/* Hero background image and overlay */}
+            <div className="absolute inset-0 w-full h-full -z-10">
+              <img
+                src="/hero-cafe.jpg"
+                alt="Warm, elegant cafe interior with artisan coffee and food."
+                className="w-full h-full object-cover object-center opacity-80"
+                style={{ filter: 'brightness(0.92) blur(0.5px)' }}
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-bg/80 via-cream/60 to-structural/60" />
+            </div>
             <div className="text-center max-w-2xl mx-auto py-24">
-              <h1 className="font-heading text-5xl md:text-7xl mb-6 text-structural">A Modern Cafe Experience</h1>
-              <p className="text-lg md:text-2xl mb-8 text-olive">Warm. Elegant. Handcrafted. Welcome to your new favorite spot.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#reservation" className="bg-accent text-bg px-8 py-3 rounded-full font-heading text-xl shadow hover:scale-105 transition">Reserve a Table</a>
-                <a href="#menu" className="bg-structural text-bg px-8 py-3 rounded-full font-heading text-xl shadow hover:bg-olive transition">View Menu</a>
+              <h1 className="font-heading text-5xl md:text-7xl mb-6 text-accent drop-shadow-lg">
+                Discover <span className="text-terracotta">Your City’s</span> Most Inviting <span className="text-olive">Cafe</span>
+              </h1>
+              <p className="text-lg md:text-2xl mb-8 text-cream bg-structural/80 px-6 py-3 rounded-xl shadow inline-block">
+                Where every cup, every plate, and every moment is crafted for you.<br className="hidden md:inline" />
+                Experience artisan coffee, signature dishes, and a cozy atmosphere.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                <a href="#reservation" className="bg-accent text-bg px-8 py-3 rounded-full font-heading text-xl shadow-lg hover:scale-105 hover:bg-gold transition border-2 border-gold">
+                  Reserve a Table
+                </a>
+                <a href="#menu" className="bg-terracotta text-cream px-8 py-3 rounded-full font-heading text-xl shadow-lg hover:bg-olive hover:text-bg transition border-2 border-olive">
+                  View Menu
+                </a>
+              </div>
+              <div className="mt-10 flex flex-col items-center gap-2">
+                <span className="uppercase tracking-widest text-xs text-gold font-bold">Now Open</span>
+                <span className="text-structural font-heading text-lg">Visit us for breakfast, brunch, or dinner</span>
               </div>
             </div>
           </section>
