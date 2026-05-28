@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <h2 className="font-heading text-4xl mb-8 text-structural">Featured Menu</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Example card */}
-                <div className="bg-bg rounded-xl shadow p-6 hover:shadow-lg transition border border-structural">
+                <div className="editorial-card p-6 hover:shadow-lg transition border border-walnut">
                   <h3 className="font-heading text-2xl mb-2">Signature Dish</h3>
                   <p className="text-olive mb-2">A delicious artisan creation.</p>
                   <span className="block text-accent font-bold text-xl">$18</span>
@@ -92,9 +92,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </section>
 
           {/* About Section */}
-          <section id="about" className="py-24 bg-bg border-t border-structural">
+          <section id="about" className="editorial-section bg-bg-soft border-t border-walnut">
             <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12 items-center">
-              <div className="flex-1 min-h-[300px] bg-cream rounded-xl shadow" />
+              <div className="flex-1 min-h-[300px] editorial-card" />
               <div className="flex-1">
                 <h2 className="font-heading text-4xl mb-4 text-structural">Our Story</h2>
                 <p className="text-lg text-olive mb-4">Family-owned. Local ingredients. Artisan craftsmanship. Cozy atmosphere.</p>
@@ -104,12 +104,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </section>
 
           {/* Gallery Section */}
-          <section id="gallery" className="py-24 bg-cream">
+          <section id="gallery" className="editorial-section bg-bg-alt">
             <div className="max-w-6xl mx-auto px-4">
               <h2 className="font-heading text-4xl mb-8 text-structural">Gallery</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {/* Gallery images placeholder */}
-                <div className="aspect-square bg-bg rounded-lg shadow" />
+                <div className="aspect-square editorial-card" />
                 <div className="aspect-square bg-bg rounded-lg shadow" />
                 <div className="aspect-square bg-bg rounded-lg shadow" />
                 <div className="aspect-square bg-bg rounded-lg shadow" />
@@ -118,12 +118,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </section>
 
           {/* Testimonials Section */}
-          <section id="testimonials" className="py-24 bg-bg border-t border-structural">
+          <section id="testimonials" className="editorial-section bg-bg border-t border-walnut">
             <div className="max-w-6xl mx-auto px-4">
               <h2 className="font-heading text-4xl mb-8 text-structural">Testimonials</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Testimonial card placeholder */}
-                <div className="bg-cream rounded-xl shadow p-6">
+                <div className="editorial-card p-6">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-gold">★★★★★</span>
                   </div>
@@ -136,10 +136,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </section>
 
           {/* Reservation Section */}
-          <section id="reservation" className="py-24 bg-cream">
+          <section id="reservation" className="editorial-section bg-bg-alt">
             <div className="max-w-md mx-auto px-4">
               <h2 className="font-heading text-4xl mb-8 text-structural text-center">Reserve a Table</h2>
-              <form className="bg-bg rounded-xl shadow p-8 flex flex-col gap-4">
+              <form className="editorial-card p-8 flex flex-col gap-4">
                 <input type="text" placeholder="Name" className="border border-structural rounded px-4 py-2" required />
                 <input type="tel" placeholder="Phone" className="border border-structural rounded px-4 py-2" required />
                 <input type="email" placeholder="Email" className="border border-structural rounded px-4 py-2" required />
@@ -154,11 +154,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </section>
 
           {/* Location & Contact Section */}
-          <section id="contact" className="py-24 bg-bg border-t border-structural">
+          <section id="contact" className="editorial-section bg-bg-soft border-t border-walnut">
             <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="font-heading text-4xl mb-4 text-structural">Find Us</h2>
-                <div className="w-full h-64 bg-cream rounded-xl shadow mb-4 flex items-center justify-center">
+                <div className="w-full h-64 editorial-card mb-4 flex items-center justify-center">
                   {/* Google Maps embed placeholder */}
                   <span className="text-olive">[Google Map]</span>
                 </div>
@@ -185,7 +185,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
 
         {/* Footer */}
-        <footer className="bg-structural text-bg py-8 mt-12">
+        <footer className="bg-structural text-bg py-12 mt-12">
           <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex gap-6 mb-4 md:mb-0">
               <a href="#home" className="hover:text-accent">Home</a>
